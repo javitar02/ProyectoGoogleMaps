@@ -25,14 +25,14 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        // Inicializo la vista
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        //Inicializo el fragmento del mapa
+
         SupportMapFragment supportMapFragment = (SupportMapFragment)
                 getChildFragmentManager().findFragmentById(R.id.google_map);
 
-        //Sincronizacion
+
         supportMapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull GoogleMap googleMap) {
@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
                         //Se establece la posición del marcador
                         markerOptions.position(latLng);
                         //Se pone título al marcador
-                        markerOptions.title(latLng.latitude+":"+latLng.longitude);
+                        markerOptions.title(String.valueOf(R.id.titulo));
                         //Borrar los marcadores (todos)
                         googleMap.clear();
                         //Hacer zoom

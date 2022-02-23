@@ -20,9 +20,10 @@
 
     <EditText
         android:id="@+id/latitud"
-        android:hint="@string/latitud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="@string/latitud"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.209"
@@ -32,9 +33,10 @@
 
     <EditText
         android:id="@+id/localizacion"
-        android:hint="@string/localizacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="@string/localizacion"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.785"
@@ -44,15 +46,15 @@
 
     <EditText
         android:id="@+id/descripcion"
-        android:hint="@string/descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="@string/descripcion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintVertical_bias="0.717" />
 
     <CalendarView
         android:id="@+id/calendarView"

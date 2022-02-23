@@ -36,7 +36,6 @@ import java.util.List;
 import kotlin.jvm.internal.PropertyReference0Impl;
 
 public class DashboardFragment extends Fragment {
-
     private FragmentDashboardBinding binding;
 
     private EventViewModel mEventViewModel;
@@ -44,6 +43,7 @@ public class DashboardFragment extends Fragment {
     private CalendarView calDate;
 
     private EditText nombre, descripcion,latitud, localizacion;
+    private Toast msg;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -76,9 +76,13 @@ public class DashboardFragment extends Fragment {
                 latitud = root.findViewById(R.id.latitud);
                 localizacion = root.findViewById(R.id.localizacion);
 
-                Event event = new Event(nombre.getText().toString(),newDate[0],Double.parseDouble(latitud.getText().toString()),Double.parseDouble(localizacion.getText().toString()));
-                mEventViewModel.insert(event);
-
+                if (nombre.getText().toString().length() == 0 || descripcion.getText().toString().length() == 0 || latitud.getText().toString().length() == 0 || localizacion.getText().toString().length() == 0){
+                    msg = Toast.makeText(getContext(),"RELLENA LOS CAMPOS VACIOS",Toast.LENGTH_SHORT);
+                    msg.show();
+                }else{
+                    Event event = new Event(nombre.getText().toString(),newDate[0],Double.parseDouble(latitud.getText().toString()),Double.parseDouble(localizacion.getText().toString()));
+                    mEventViewModel.insert(event);
+                }
             }
         });
 
