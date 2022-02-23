@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProyectoGoogleMaps</string>
+    <string name="title_home">Mapas</string>
+    <string name="title_dashboard">Añadir</string>
+    <string name="title_notifications">Eventos</string>
+    <string name="titulo">Título del Evento</string>
+    <string name="latitud">Latitud</string>
+    <string name="localizacion">Localizacion</string>
+    <string name="descripcion">Descripcion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
