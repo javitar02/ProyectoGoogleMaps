@@ -36,6 +36,12 @@
                 android:layout_height="wrap_content"
                 android:text="Localizacion"
                 android:textSize="15sp" />
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:textSize="15sp" />
         </LinearLayout>
         <TextView
             android:id="@+id/fecha"

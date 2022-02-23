@@ -41,6 +41,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder>{
 
         if(eventList != null){
             holder.nombre.setText(eventList.get(position).getNombre());
+            holder.descripcion.setText(eventList.get(position).getDescripcion());
             holder.latitud.setText(String.valueOf(eventList.get(position).getLatitud()));
             holder.localizacion.setText(String.valueOf(eventList.get(position).getLocalizacion()));
             holder.fecha.setText(fechaString);
@@ -56,12 +57,13 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView nombre,fecha,latitud,localizacion;
+        public final TextView nombre,fecha,latitud,localizacion,descripcion;
         public long fechaAInsertar;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nombre = itemView.findViewById(R.id.titulo);
+            descripcion = itemView.findViewById(R.id.descripcion);
             fecha = itemView.findViewById(R.id.fecha);
             latitud = itemView.findViewById(R.id.latitud);
             localizacion = itemView.findViewById(R.id.localizacion);

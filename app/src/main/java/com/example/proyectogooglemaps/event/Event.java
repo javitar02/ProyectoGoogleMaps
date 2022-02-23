@@ -31,7 +31,7 @@ public class Event {
     private double localizacion;
 
 
-    public Event(String nombre, Long fecha, double latitud,double localizacion) {
+    public Event(String nombre, Long fecha, double latitud,double localizacion,String descripcion) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.descripcion = descripcion;

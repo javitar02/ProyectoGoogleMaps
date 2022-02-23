@@ -80,7 +80,7 @@ public class DashboardFragment extends Fragment {
                     msg = Toast.makeText(getContext(),"RELLENA LOS CAMPOS VACIOS",Toast.LENGTH_SHORT);
                     msg.show();
                 }else{
-                    Event event = new Event(nombre.getText().toString(),newDate[0],Double.parseDouble(latitud.getText().toString()),Double.parseDouble(localizacion.getText().toString()));
+                    Event event = new Event(nombre.getText().toString(),newDate[0],Double.parseDouble(latitud.getText().toString()),Double.parseDouble(localizacion.getText().toString()),descripcion.getText().toString());
                     mEventViewModel.insert(event);
                 }
             }
